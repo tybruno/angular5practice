@@ -13,6 +13,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyNewComponentComponent implements OnInit {
 
+  itemCount:number = 3;
+  btnText: string = 'Add Item';
+
   constructor() { }
 
   ngOnInit() {
