@@ -13,13 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyNewComponentComponent implements OnInit {
 
-  itemCount:number = 3;
+  itemCount:number;
   btnText: string = 'Add Item';
   goalText: string = 'My first life goal';
+  goals = [];
 
   constructor() { }
 
   ngOnInit() {
+    this.itemCount = this.goals.length;
+  }
+  addItem(){
+    this.goals.push(this.goalText);
+    this.goalText = ''; // clears out text once its been submitted.
+    this.itemCount = this.goals.length;
   }
 
 }

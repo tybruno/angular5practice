@@ -16,17 +16,17 @@
       <!--<input type="text" class="txt" name="item" placeholder="Life goal..">-->
       <!--Two way binding-->
       <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
-      <br><span>{{goalText}}</span>
+      <!--<br><span>{{goalText}}</span>-->
       <!-- Interpolation -->
       <!--<input type="submit" class="btn" value="{{ btnText }}">-->
-
       <!--THis is how you define property binding with '[ ]'. Basically the same as ({{}})-->
-      <input type="submit" class="btn" [value]=btnText>
+      <input type="submit" class="btn" [value]="btnText" (click) = "addItem()">
     </form>
   </div>
   <div class="col">
-    <p class="life-container">
-      I want to climb a mountain
+    <p class="life-container" *ngFor="let goal of goals">
+      {{goals}}
+
     </p>
   </div>
 </div>
