@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 
-//this must be imported in app.module to use it.
+// this must be imported in app.module to use it.
 @Injectable()
 export class DataService {
 

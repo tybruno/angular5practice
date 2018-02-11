@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from './data.service';
 
 @NgModule({
-  providers: [DataService],
   declarations: [
     AppComponent,
     MyNewComponentComponent,
@@ -22,7 +21,7 @@ import { DataService } from './data.service';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

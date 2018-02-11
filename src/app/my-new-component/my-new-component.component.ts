@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style , transition, animate , keyframes , query , stagger } from '@angular/animations';
+// Other imports removed for brevity
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-my-new-component',
   templateUrl: './my-new-component.component.html',
   styleUrls: ['./my-new-component.component.css'],
-  animations: [ //where you define your animations
+  animations: [ // where you define your animations
 
     trigger('goals', [
       transition('* => *', [
@@ -41,20 +43,24 @@ export class MyNewComponentComponent implements OnInit {
   itemCount:number;
   btnText: string = 'Add Item';
   goalText: string = 'My first life goal';
-  goals = ['My first life goal', 'I want to climb a mountain', 'Go ice skiing'];
-  constructor() { }
+  goals = [];
+  constructor(private _data: DataService) { }
 
   ngOnInit() {
+    this._data.goal.subscribe(res => this.goals = res);
     this.itemCount = this.goals.length;
+    this._data.changeGoal(this.goals);
   }
   addItem() {
     this.goals.push(this.goalText);
     this.goalText = ''; // clears out text once its been submitted.
     this.itemCount = this.goals.length;
+    this._data.changeGoal(this.goals);
   }
 
   removeItem(i) {
     this.goals.splice(i, 1);
+    this._data.changeGoal(this.goals);
     this.itemCount = this.itemCount - 1;
   }
 
