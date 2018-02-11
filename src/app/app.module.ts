@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
 import { AboutComponent } from './about/about.component'; // added when we created a new component
 // import { AppRoutingModule} from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AboutComponent } from './about/about.component'; // added when we creat
   imports: [
     BrowserModule,
     // AppRountingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
