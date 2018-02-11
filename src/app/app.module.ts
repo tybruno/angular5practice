@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
 import { AboutComponent } from './about/about.component'; // added when we created a new component
-// import { AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    // AppRountingModule,
+    AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule
   ],
