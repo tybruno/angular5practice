@@ -7,9 +7,10 @@ import { MyNewComponentComponent } from './my-new-component/my-new-component.com
 import { AboutComponent } from './about/about.component'; // added when we created a new component
 import { AppRoutingModule} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { DataService } from './data.service';
 
 @NgModule({
+  providers: [DataService],
   declarations: [
     AppComponent,
     MyNewComponentComponent,
