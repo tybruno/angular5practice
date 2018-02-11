@@ -10,7 +10,8 @@ const routes: Routes = [
     component: MyNewComponentComponent
   },
   {
-    path: 'about',
+    // Route parameter ':id'. you can have as many route parameters as you want. Ex: about/:id/:whatever
+    path: 'about/:id',
     component: AboutComponent
   }
 ];

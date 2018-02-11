@@ -55,6 +55,7 @@ export class MyNewComponentComponent implements OnInit {
 
   removeItem(i) {
     this.goals.splice(i, 1);
+    this.itemCount = this.itemCount - 1;
   }
 
 }
